@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
 from libraries.SVM_Methods import *
-from libraries.BagOfWords import *
+from libraries.Bag_of_words import *
 
 k = 4
 sentences = [
@@ -20,7 +20,6 @@ def SVM_KFolds_sentences(sentences, k, keyword_list, kernel='linear', C=1.0, gam
     x, y = Vectorize_Bag_of_Words(sentences, keyword_list)
     clf, results = SVM_Kfolds(x, y, k, kernel=kernel, C=C, gamma=gamma)
     return clf, results
-
 
 clf, results = SVM_KFolds_sentences(sentences, k, keyword_list, kernel = 'linear', C = 1.0, gamma = 0.001, times = 1)
 
