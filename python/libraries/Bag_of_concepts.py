@@ -5,7 +5,7 @@ from gensim.models import Word2Vec
 from sklearn.feature_extraction import DictVectorizer
 from collections import OrderedDict, Counter
 import numpy
-from libraries.Corpus_preprocessing import *
+from Corpus_preprocessing import *
 
 #########################
 #### Word2Vec Model ####

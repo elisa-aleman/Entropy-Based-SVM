@@ -1,10 +1,10 @@
 #-*- coding: utf-8 -*-
 
-from libraries.ProjectPaths import *
-from libraries.UsefulMethods import *
-from libraries.Entropy import *
-from libraries.SVM_methods import *
-from libraries.Bag_of_words import *
+from ProjectPaths import *
+from UsefulMethods import *
+from Entropy import *
+from SVM_methods import *
+from Bag_of_words import *
 
 def make_entropies_table(corpus, positive_documents, negative_documents, general_dict, file_prefix=''):
     pos_raw_entropies = entropy_list(general_dict, positive_documents)
