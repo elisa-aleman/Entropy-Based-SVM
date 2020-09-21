@@ -6,11 +6,15 @@ import codecs
 import csv
 import numpy
 import pandas
+import swifter
 from io import StringIO
 
 ######################################
 ###### Special printing methods ######
 ######################################
+
+def clear():
+    os.system('cls||clear')
 
 def up():
     '''
