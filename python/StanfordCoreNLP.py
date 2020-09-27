@@ -13,7 +13,7 @@ from stanza.server import CoreNLPClient
     https://stanfordnlp.github.io/CoreNLP/other-languages.html#python
 
     Penn Treebank POS tags: 
-    https://www.ling.upenn.edu/courses/Fall_2003/ling001/penn_treebank_pos.html
+    https://repository.upenn.edu/cgi/viewcontent.cgi?article=1039&context=ircs_reports
 
     Stanza basic usage of CoreNLP client:
     https://stanfordnlp.github.io/stanza/client_usage.html
@@ -813,7 +813,11 @@ def Dependency_Parse(text_list,
         :param (str) lang: 'zh-cn' for Chinese and 'en' for English
 
         Stanford NLP dependencies manual:
-        https://nlp.stanford.edu/software/dependencies_manual.pdf
+            https://nlp.stanford.edu/software/dependencies_manual.pdf
+        
+        Since updates, Stanford CoreNLP now uses Universal Dependencies.
+        Universal Dependencies website:
+        https://universaldependencies.org/#language-
 
         :return: List per document of: Tuple of sentence, and dependency list nested in a list of sentences
                 if output_with_sentence==True:
@@ -1006,6 +1010,8 @@ def Dependency_Parse(text_list,
                 result.append(deps_str)
     return result
 
+
+# sometimes returns unshapely tuples, maybe broken by punctuation as words
 def Dependency_Parse_str_tolist(dep_parse_str, output_with_sentence=True):
     '''
         In case of storing Dependency_Parse() output in string form,
