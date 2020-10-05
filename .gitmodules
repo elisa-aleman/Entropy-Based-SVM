@@ -1,15 +1,12 @@
 [submodule "Kaomoji_parsing"]
 	path = Kaomoji_parsing
 	url = https://github.com/elisa-aleman/Kaomoji_parsing
-[submodule "MachineLearning_Kfolds"]
-	path = MachineLearning_Kfolds
-	url = https://github.com/elisa-aleman/MachineLearning_Kfolds
-[submodule "StanfordCoreNLP-Chinese"]
-	path = StanfordCoreNLP-Chinese
-	url = https://github.com/elisa-aleman/StanfordCoreNLP-Chinese
 [submodule "useful_methods"]
 	path = useful_methods
 	url = https://github.com/elisa-aleman/useful_methods
 [submodule "MachineLearning"]
 	path = MachineLearning
 	url = https://github.com/elisa-aleman/MachineLearning
+[submodule "StanfordCoreNLP_Chinese"]
+	path = StanfordCoreNLP_Chinese
+	url = https://github.com/elisa-aleman/StanfordCoreNLP_Chinese
