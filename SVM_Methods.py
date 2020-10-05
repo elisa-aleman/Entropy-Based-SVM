@@ -5,7 +5,7 @@ import numpy
 from sklearn import svm
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
-from Model_metrics import F_score_multiclass_Kfolds, F_score_Kfolds
+from MachineLearning.Model_metrics import F_score_multiclass_Kfolds, F_score_Kfolds
 from Bag_of_words import get_feature_names
 
 def SVM_Train(x, y, test_size, shuffle=True, kernel ='linear', C=1.0, gamma=0.001):

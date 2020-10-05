@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 
-from ProjectPaths import *
-from UsefulMethods import *
+from useful_methods.ProjectPaths import *
+from useful_methods.UsefulMethods import *
 from Entropy import *
 from SVM_methods import *
 from Bag_of_words import *
