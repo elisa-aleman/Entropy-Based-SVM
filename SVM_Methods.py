@@ -6,7 +6,6 @@ from sklearn import svm
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.model_selection import train_test_split
 from MachineLearning.Model_metrics import F_score_multiclass_Kfolds, F_score_Kfolds
-from Bag_of_words import get_feature_names
 
 def SVM_Train(x, y, test_size, shuffle=True, kernel ='linear', C=1.0, gamma=0.001):
     if test_size>0:
@@ -55,7 +54,9 @@ def SVM_weights_untrained(x, y, feature_names, kernel = 'linear', C = 1.0, gamma
 
 def SVM_weights_trained(clf,keyword_list):
     weights = clf.coef_.tolist()[0]
-    feature_names = get_feature_names(keyword_list)
+    vectorizer = CountVectorizer(min_df=1, token_pattern='(?u)\\b\\w+\\b')
+    IM = vectorizer.fit_transform(keyword_list)
+    feature_names = vectorizer.get_feature_names()
     influences = list(zip(feature_names, weights))
     return influences
 
